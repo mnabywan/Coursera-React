@@ -57,10 +57,9 @@ class Menu extends Component {
           return(
             <div>
               <p>{comment.comment}</p>
-              <p>-- {comment.author} {comment.date}</p>
+              <p>-- {comment.author},  {comment.date}</p>
             </div>
           )
-
         })
         
         return(
@@ -75,7 +74,6 @@ class Menu extends Component {
       else{
         return(
           <div className="col-12 col-md-5 m-1">
-          daaaa
           </div>
         )
       }
@@ -95,16 +93,7 @@ class Menu extends Component {
               </div>
             );
         });
-        // console.log(this.state.selectedDish);
-        // if (this.state.selectedDish != null){ 
-        //   console.log('BBBBBB')
-        // }
-        // else{
-        //   console.log('AAAA');
-        // }
 
-
-        
         return (
           <div className="container">
             <div className="row">
