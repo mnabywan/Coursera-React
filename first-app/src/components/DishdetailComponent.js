@@ -41,8 +41,6 @@ import { Card, CardImg, CardImgOverlay, CardTitle, CardText, CardBody} from 'rea
     }
 
     const DishDetail = (props) => {
-        console.log('DishDetail Component render invoked');
-
         if (props.dish != null){
             return(
                 <div className="container">
