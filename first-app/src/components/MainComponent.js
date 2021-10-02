@@ -38,6 +38,14 @@ class Main extends Component {
       )
     }
 
+    const DishWthId = ({match}) => {
+       return(
+         <DishDetail dish={this.state.dishes.filter((dish) => dish.id === parseInt(match.params.dishId, 10))[0]}
+          comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId, 10))}
+         />
+       )
+    }
+
     return (
       <div className="App">
         <Header/>
@@ -45,7 +53,8 @@ class Main extends Component {
           <Route path="/home" component={HomePage}/> // does not allow to pass ant props
           <Route exact path="/menu" 
             component={() => <Menu dishes={this.state.dishes}/>}/> //better way we can pass props
-          <Route exact path="contactus" component={Contact}/>
+          <Route path="/menu/:dishId" component={DishWthId}/>
+          <Route exact path="/contactus" component={Contact}/>
           <Redirect to="/home" />
 
         </Switch>
